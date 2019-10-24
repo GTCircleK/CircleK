@@ -59,13 +59,24 @@
 
 
 					<h3 class="major">See our Calender</h3>
-					<iframe src="" frameborder="0">Google Calender Here</iframe>
+					<p id="calender-link">
+						<a href="https://calendar.google.com/calendar/embed?src=gatechcirclek%40gmail.com&ctz=America%2FNew_York"
+							target="blank" class="dotted-line"> Visit our Calender</a>
+					</p>
+
+					<p id="calender">					
+					<iframe
+						src="https://calendar.google.com/calendar/b/5/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FNew_York&amp;src=Z2F0ZWNoY2lyY2xla0BnbWFpbC5jb20&amp;src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%230BBCB2&amp;color=%23007D39"
+						style="border-width:0" width="700" height="600" frameborder="0" scrolling="no"></iframe>
+					</p>
+
+					<br>
 
 
 					<div id="events">
 						<h3 class="major">Upcoming Events</h3>
 					</div>
-					
+
 				</div>
 			</div>
 
@@ -106,20 +117,20 @@
 
 	<script>
 
-			/* Generic Event Format
-			Remove the attribute if no entries for it
-			{
-				'title': '',
-				'date': '',
-				'summary': '',
-				'address': '',
-				'time' : '',
-				'pickup': '',
-				'dress': '',
-				'link': '',
-				'special': ''
-			}
-			*/
+		/* Generic Event Format
+		Remove the attribute if no entries for it
+		{
+			'title': '',
+			'date': '',
+			'summary': '',
+			'address': '',
+			'time' : '',
+			'pickup': '',
+			'dress': '',
+			'link': '',
+			'special': ''
+		}
+		*/
 		var events = [
 			{
 				'title': 'Kiwanis Henry County Fair',
@@ -171,7 +182,7 @@
 				// Miscellaneous event details
 				container.appendChild(getEventDetails(event));
 
-				if (event.hasOwnProperty('special')){
+				if (event.hasOwnProperty('special')) {
 					container.innerHTML += '<p>' + event['special'] + '</p>';
 				}
 
