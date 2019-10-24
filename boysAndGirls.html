@@ -5,6 +5,9 @@
 	<title>Boys and Girls Club | GT Circle K</title>
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css">
 	<link rel="stylesheet" href="assets/css/main.css" />
 </head>
 
@@ -68,7 +71,7 @@
 							Please try to arrive 15 minutes before the event (by 4:05 pm). This is the roundabout
 							outside the back entrance of the CULC. Please contact us if you can't make it here in time,
 							and we'll try to accommodate you.</li>
-						<li class="icon brands fa-tshirt">If you want to play sports, wear clothes to run around in.
+						<li class="icon solid fa-tshirt">If you want to play sports, wear clothes to run around in.
 							<br>
 							If you plan to do crafts/blocks/etc, wear casual clothing. <br>
 							No inappropriate clothing (you will be around children).
@@ -85,6 +88,63 @@
 						</li>
 					</ul>
 
+					<h3 class="major">Photo Gallery</h3>
+					<div id="gallery">
+						<a href="images/Pictures/Meetings/IMG_3289.JPG" data-fancybox="gallery"
+							data-caption="Caption for single image">
+							<img src="images/Pictures/Meetings/IMG_3289.JPG" alt="" />
+						</a>
+						<a href="images/_DSC0799-1.jpg" data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images/_DSC0799-1.jpg" alt="" />
+						</a>
+						<a href="images/Pictures/Birchmore Memorial Race (with UGA)/IMG_3794.JPG"
+							data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images/Pictures/Birchmore Memorial Race (with UGA)/IMG_3794.JPG" alt="" />
+						</a>
+						<a href="images/Pictures/Birchmore Memorial Race (with UGA)/IMG_3805.JPG"
+							data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images/Pictures/Birchmore Memorial Race (with UGA)/IMG_3805.JPG" alt="" />
+						</a>
+						<a href="images/_DSC0753-1.jpg" data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images/_DSC0753-1.jpg" alt="" />
+						</a>
+
+
+						<a href="images/Pictures/Key Club Leadership Conference/IMG_3573.JPG" data-fancybox="gallery"
+							data-caption="Caption for single image">
+							<img src="images/Pictures/Key Club Leadership Conference/IMG_3573.JPG" alt="" />
+						</a>
+
+						<a href="images/IMG_2904-2.jpg" data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images/IMG_2904-2.jpg" alt="" />
+						</a>
+
+						<a href="images/Pictures/District Day of Service/IMG953972.jpg" data-fancybox="gallery"
+							data-caption="Caption for single image">
+							<img src="images/Pictures/District Day of Service/IMG953972.jpg" alt="" />
+						</a>
+						<a href="images/Pictures/District Day of Service/IMG954003.jpg" data-fancybox="gallery"
+							data-caption="Caption for single image">
+							<img src="images/Pictures/District Day of Service/IMG954003.jpg" alt="" />
+						</a>
+						<a href="images/Pictures/Carrollton Half Marathon/IMG_3160.JPG" data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images/Pictures/Carrollton Half Marathon/IMG_3160.JPG" alt="" />
+						</a>
+						<a href="images/Pictures/Kiwanis Day of Service/IMG_0131.JPG" data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images/Pictures/Kiwanis Day of Service/IMG_0131.JPG" alt="" />
+						</a>
+						<a href="images/Pictures/Kiwanis Day of Service/IMG_0132.JPG" data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images/Pictures/Kiwanis Day of Service/IMG_0132.JPG" alt="" />
+						</a>
+						
+
+
+						<!-- <a href="images" data-fancybox="gallery" data-caption="Caption for single image">
+							<img src="images" alt="" />
+						</a> -->
+					</div>
+
+
 				</div>
 			</div>
 
@@ -96,8 +156,44 @@
 	<script src="assets/js/jquery.scrollex.min.js"></script>
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+
+	<script>
+		$('#gallery').justifiedGallery({
+			rowHeight: 200,
+			randomize: true,
+			margin: 5,
+			lastRow: 'justify'
+		}).on('jg.complete', function () {
+			$('[data-fancybox="gallery"]').fancybox({
+				protect: true,
+				loop: true,
+				closeExiting: false,
+				keyboard: true,
+				preventCaptionOverlap: true,
+				arrows: true,
+				infobar: true,
+				buttons: ['zoom', 'slideShow', 'fullScreen', 'thumbs', 'close', 'info'],
+				animationEffect: 'zoom-in-out',
+				transitionEffect: 'fade',
+				afterLoad: function (instance, current) {
+					var pixelRatio = window.devicePixelRatio || 1;
+
+					if (pixelRatio > 1.5) {
+						current.width = current.width / pixelRatio;
+						current.height = current.height / pixelRatio;
+					}
+				}
+			});
+		});
+
+
+
+	</script>
 
 </body>
 
