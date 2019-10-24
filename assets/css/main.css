@@ -281,10 +281,19 @@ input, select, textarea {
 		margin: 1.15em 0;
 	}
 
-	.benefits h3{
-		color: black;
-		margin-bottom: 0.5em;
+	.benefits h3, .event h3{
+		color: black;		
+		margin: 0.5em 0;
 	}
+
+	.event{
+		border-bottom: solid 2px rgba(145, 145, 145, 0.3);
+	}
+
+	.event .contact li{
+		margin: 0.75em 0 0 0;
+	}
+	
 	.infographics{
 		width: 100%;
 		display: flex;
