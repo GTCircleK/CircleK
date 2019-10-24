@@ -281,6 +281,10 @@ input, select, textarea {
 		margin: 1.15em 0;
 	}
 
+	.benefits h3{
+		color: black;
+		margin-bottom: 0.5em;
+	}
 	.infographics{
 		width: 100%;
 		display: flex;
