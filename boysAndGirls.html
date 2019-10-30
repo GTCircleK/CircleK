@@ -94,13 +94,13 @@
 					<div id="gallery">
 						<script>
 							// Temporary implementation
-							var images = ['20170908-171205_orig.jpg','20171006-172424_orig.jpg','b4-dj-got-beat-by-kijana_orig.jpg','img-2090_orig.jpg','img-2094_orig.jpg','img-2123_orig.jpg','img-2126_orig.jpg','img-2256_orig.jpg','img-2258_orig.jpg','img-2261_orig.jpg','IMG_9239.jpg','IMG_9242.JPG','IMG_9280.jpg','kijana-has-no-chill_orig.jpg','left_orig.jpg','mid_orig.jpg','right_orig.jpg'];
+							var images = ['20170908-171205_orig.jpg', '20171006-172424_orig.jpg', 'b4-dj-got-beat-by-kijana_orig.jpg', 'img-2090_orig.jpg', 'img-2094_orig.jpg', 'img-2123_orig.jpg', 'img-2126_orig.jpg', 'img-2256_orig.jpg', 'img-2258_orig.jpg', 'img-2261_orig.jpg', 'IMG_9239.jpg', 'IMG_9242.JPG', 'IMG_9280.jpg', 'kijana-has-no-chill_orig.jpg', 'left_orig.jpg', 'mid_orig.jpg', 'right_orig.jpg'];
 							var container = document.querySelector('#gallery');
 
 							images.forEach(image => {
-								var imagePath = 'images/Pictures/boysAndGirls/'+ image;
-								var imgSrc = '<img src="'+ imagePath + '" alt="" />';
-								var aLink = '<a href="'+imagePath + '" data-fancybox="gallery">' + imgSrc + '</a>';
+								var imagePath = 'images/Pictures/boysAndGirls/' + image;
+								var imgSrc = '<img src="' + imagePath + '" alt="" />';
+								var aLink = '<a href="' + imagePath + '" data-fancybox="gallery">' + imgSrc + '</a>';
 								container.innerHTML += aLink;
 							});							
 						</script>
